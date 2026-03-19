@@ -2,7 +2,7 @@
 @name jetbuilt.com Catppuccin
 @namespace github.com/Dragoid22/userstyles/styles/jetbuilt
 @homepageURL https://github.com/Dragoid22/userstyles/tree/feat/jetbuilt/styles/jetbuilt
-@version 0.0.2
+@version 0.0.3
 @updateURL https://github.com/Dragoid22/userstyles/raw/feat/jetbuilt/styles/jetbuilt/catppuccin.user.less
 @supportURL https://github.com/Dragoid22/userstyles/issues?q=is%3Aopen+is%3Aissue+label%3Ajetbuilt
 @description Soothing pastel theme for jetbuilt.com
@@ -33,9 +33,7 @@
 
   /* If the website you are theming *does* have a light/dark mode toggle,
      you can conditionally enable light/dark flavors by targeting whatever
-     attribute that website uses to indicate the theme. *The example below gives you an idea of what
-     to look for. The website you are theming may use a class-based approach (e.g. :root.theme-dark),
-     or any of the myriad of other methods like this.*
+     attribute that website uses to indicate the theme. *The example below gives you an idea of what to look for. The website you are theming may use a class-based approach (e.g. :root.theme-dark), or any of the myriad of other methods like this.*
      Use the below example CSS to start if this is the case.
      For an actual example of this, see https://github.com/catppuccin/userstyles/blob/39288b593278e5efa48007d5fc001292cf910672/styles/youtube/catppuccin.user.css#L21-L30.
   */
@@ -50,86 +48,227 @@
     #lib.palette();
     #lib.defaults();
 
-    /* Start styling your website here: */
-    // * {
-    //   color: @text !important;
-    //   border-color: @surface2 !important;
-    //   margin: @red !important;
-    //   padding: @red !important;
-    // }
+    @import "https://raw.githubusercontent.com/Dragoid22/userstyles/refs/heads/feat/jetbuilt/styles/jetbuilt/base_jetbuilt.less";
+    @import "https://github.com/Dragoid22/userstyles/raw/refs/heads/feat/jetbuilt/styles/jetbuilt/jetbuilt.less";
 
-    body {
-      color: @text;
-    }
-
-    main {
-      background-color: @base;
-      margin: @base;
-    }
-
-    section {
-      background-color: @base;
-      margin: @base;
-    }
-
-    .quaternary {
-      background: @mantle;
-      color: @text;
-    }
-
-    nav.secondary {
-      background: @crust;
-      border-color: @red;
-    }
-
-    nav.quaternary li {
-      background-color: @mantle;
-      color: @text;
-    }
-
-    nav.builder section.additional_filters {
-      border-color: @surface1;
-    }
-
-    #deleted {
-      border-color: @surface1;
-    }
-
-    article#builder .sticky-element,
-    article#project_assets .sticky-element,
-    article#project_stock_items .sticky-element {
-      background-color: @base;
-    }
-    // jb-bar {
-    //   background-color: @surface0 !important;
-    // }
-    // jb-bar.equipment {
-    //   --bar-color: @blue !important;
-    // }
-    // #active_systems {
-    //     background-color: @mantle
-    // }
-
+    // /* Start styling your website here: */
+    // --jb-color-drawings: rgb(171, 9, 128);
+    // --jb-color-tan: @rosewater;
     // --jb-color-yellow: @yellow;
     // --jb-color-orange: @peach;
     // --jb-color-purple: @lavender;
-    // --jb-color-gold: #DCB53D;
+    // --jb-color-gold: #dcb53d;
     // --jb-color-red: @red;
     // --jb-color-green: @green;
-    // --jb-color-white: #FFF;
-    // --jb-color-amber: #DFBA2D;
+    // --jb-color-white: @subtext0;
+    // --jb-color-amber: #dfba2d;
     // --jb-color-blue-300: @sky;
     // --jb-color-blue: @blue;
+    // --jb-color-gray-50: rgb(249, 248, 247);
+    // --jb-color-gray-75: rgb(230, 230, 230);
+    // --jb-color-gray-100: rgb(210, 210, 203);
+    // --jb-color-gray-200: rgb(179, 179, 179);
+    // --jb-color-gray-300: rgb(153, 153, 153);
+    // --jb-color-gray-400: rgb(119, 117, 117);
+    // --jb-color-gray-500: #aaa;
+    // --jb-color-gray-600: rgb(132 132 132);
+    // --jb-color-gray-700: rgb(102, 102, 102);
+    // --jb-color-gray-800: rgb(51, 51, 51);
+    // --jb-color-gray-900: rgb(38, 44, 51);
+    // --jb-color-gray-925: #222;
+    // --jb-color-gray-950: rgb(11, 16, 25);
+    // // --jb-font-bold: 'DINNextLTPro-Bold';
+    // // --jb-font-light: 'DINNextLTPro-Light';
+    // // --jb-font-regular: 'DINNextLTPro-Regular';
+    // // --jb-font-medium: 'DINNextLTPro-Medium';
+    // --sl-color-purple-500: @lavender;
 
-    // /* If you need to specify an overwrite specific to a flavor
-    //  *  (e.g. only when the flavor is set to latte), you can use a `when` guard clause. */
-    // & when (@flavor = latte) {
-    //   /* ... */
+    // input {
+    //   color: @text;
+    //   background-color: @surface0;
+    //   border-color: @surface1;
     // }
-    // /* You can also negate the statement above by using
-    //  *  a `when not` guard clause. */
-    // & when not(@flavor = latte) {
-    //   /* ... */
+
+    // table#products_table thead th.project-header {
+    //   color: @text !important;
+    // }
+
+    // a,
+    // table#products_table thead th.project-header a,
+    // body,
+    // nav.quaternary li a {
+    //   color: @text;
+    // }
+
+    // /* color: rgb(170, 170, 170) */
+    // table#products_table tr.gray-light td,
+    // table#products_table tbody.bundleization tr:not(:first-child) td,
+    // table.project-items-table tr.gray-light td {
+    //   color: @subtext0 !important;
+    // }
+
+    // nav.builder h2.inactive, nav.builder h2 a.collapsed {
+    //   color: @subtext0;
+    // }
+
+    // /* color: */
+    // thead,
+    // nav.secondary header a,
+    // .nav-container nav.secondary header a,
+    // nav.secondary h2,
+    // .nav-container nav.secondary h2,
+    // article.overview section.col-height h2,
+    // aside > nav ul li a:hover,
+    // aside > nav ul li a.selected,
+    // .nav-container nav ul li a:hover,
+    // .nav-container nav ul li a.selected,
+    // tr.lineitem_header > th a {
+    //   color: @subtext1;
+    // }
+
+    // nav.quaternary li.selected,
+    // article#builder .sticky-element,
+    // article#project_assets .sticky-element,
+    // article#project_stock_items .sticky-element,
+    // table#products_table td.sticky-column,
+    // table.project-items-table td.sticky-column,
+    // table#products_table th.labor,
+    // table#products_table td.labor,
+    // table.project-items-table th.labor,
+    // table.project-items-table td.labor,
+    // main {
+    //   background-color: @base;
+    // }
+
+    // nav.primary,
+    // thead.dark th,
+    // .btn-black,
+    // .btn-black:hover,
+    // nav.secondary,
+    // .nav-container nav.secondary,
+    // table#products_table thead th {
+    //   background-color: @mantle;
+    // }
+
+    // nav.quaternary {
+    //   background-color: @crust;
+    // }
+
+    // /* color: rgb(51, 51, 51) */
+    // article.overview section.col-height h2 {
+    //   background-color: @surface0;
+    // }
+
+    // jb-bar, section.stage .stage-color {
+    //   background-color: @surface1;
+    // }
+    // .stage_bar hr {
+    //   border-color: @surface1;
+    // }
+
+    // /* color:rgb(170, 170, 170) */
+    // nav.secondary header,
+    // .nav-container nav.secondary header,
+    // .table > thead > tr > th,
+    // .table > thead > tr > td,
+    // .table > tbody > tr > th,
+    // .table > tbody > tr > td,
+    // .table > tfoot > tr > th,
+    // .table > tfoot > tr > td,
+    // nav.builder section.additional_filters,
+    // nav.quaternary hr,
+    // .table > thead > tr > th,
+    // table#products_table tfoot,
+    // .table > tbody + tbody {
+    //   border-color: @surface1;
+    // }
+
+    // table.editable .input-group, table.editable input, table.editable select {
+    //   border-color: @surface1;
+    // }
+
+    // table#products_table .hover-links,
+    // table.project-items-table .hover-links,
+    // table#products_table .hover-links a,
+    // table.project-items-table .hover-links a,
+    // table#products_table tbody tr:hover td.sticky-column,
+    // table.project-items-table tbody tr:hover td.sticky-column,
+    // table.table tbody tr:hover {
+    //   background-color: @overlay0;
+    // }
+
+    // .text-danger,
+    // a.text-danger {
+    //   color: @red !important;
+    // }
+
+    // .bundleization .hover-links a {
+    //   color: @red;
+    // }
+
+    // table .stage-color.opportunity,
+    // ul .stage-color.opportunity,
+    // figure .stage-color.opportunity {
+    //   background-color: @yellow;
+    // }
+    // jb-bar.install, jb-bar.installation, jb-bar.labor_total {
+    //   --bar-color: @yellow;
+    // }
+    // .btn.blue, .btn.blue:hover {
+    //   background-color: @blue;
+    //   color: @text;
+    // }
+    // table.editable .input-group-addon {
+    //   background-color: @surface0;
+    //   color: @text;
+    // }
+    // label input[type="checkbox"] + span, label input[type="radio"] + span {
+    //   border-color: @surface1;
+    // }
+    // table#products_table label input[type="checkbox"]:checked + span,
+    // table#products_table label input[type="radio"]:checked + span,
+    // table.project-items-table label input[type="checkbox"]:checked + span,
+    // table.project-items-table label input[type="radio"]:checked + span {
+    //   background: @blue;
+    //   border-color: @blue;
+    // }
+
+    // #products_table .desktop span.handle wa-icon {
+    //   color: @surface1;
+    // }
+
+    // wa-icon[name*="chev"] {
+    //   color: @surface1;
+    // }
+    // #modal_window > div > div > div {
+    //   background-color: @base;
+    // }
+    // label input[type="checkbox"]:checked + span,
+    // label input[type="radio"]:checked + span {
+    //   background: @blue;
+    //   border-color: @blue;
+    // }
+    // label input[type="checkbox"][disabled]:checked + span,
+    // label input[type="radio"][disabled]:checked + span {
+    //   background: @surface1;
+    //   border-color: @surface1;
+    // }
+
+    // .product-search-results .legend {
+    //   background-color: #efeee8;
+    //   color: #000;
+    // }
+
+    // .product-search-results .legend .legend-item .bundle {
+    //   color: #40a0ff;
+    // }
+
+    // .product-search-results .legend .legend-item .favorite {
+    //   color: #262c33;
+    // }
+
+    // .product-search-results .legend .legend-item .discontinued {
+    //   color: #707070;
     // }
   }
 }

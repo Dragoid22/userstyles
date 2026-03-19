@@ -1,0 +1,26 @@
+// https://raw.githubusercontent.com/Dragoid22/userstyles/refs/heads/feat/jetbuilt/styles/jetbuilt/base_jetbuilt.less
+// * {
+//   background-color: red !important;
+// }
+@import "https://userstyles.catppuccin.com/lib/lib.less";
+
+// :root[data-theme="dark"] {
+//   #catppuccin(mocha);
+// }
+// :root[data-theme="light"] {
+//   #catppuccin(@lightFlavor);
+// }
+
+#catppuccin(mocha) {
+  #lib.palette();
+  #lib.defaults();
+  * {
+    background-color: red !important;
+  }
+  * {
+    color: @green;
+  }
+}
+* {
+  color: @green;
+}
