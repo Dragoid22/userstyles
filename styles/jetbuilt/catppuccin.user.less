@@ -51,16 +51,16 @@
     @import "https://raw.githubusercontent.com/Dragoid22/userstyles/refs/heads/feat/jetbuilt/styles/jetbuilt/base_jetbuilt.less";
     @import "https://github.com/Dragoid22/userstyles/raw/refs/heads/feat/jetbuilt/styles/jetbuilt/jetbuilt.less";
 
-    --jb-color-drawings: rgb(171, 9, 128);
-    --jb-color-tan: #efeee8;
+    --jb-color-drawings: @pink;
+    --jb-color-tan: @rosewater;
     --jb-color-yellow: @yellow;
-    --jb-color-orange: #ff811c;
-    --jb-color-purple: @lavender;
-    --jb-color-gold: #dcb53d;
+    --jb-color-orange: @peach;
+    --jb-color-purple: @mauve;
+    --jb-color-gold: @yellow;
     --jb-color-red: @red;
     --jb-color-green: @green;
     --jb-color-white: #fff;
-    --jb-color-amber: #dfba2d;
+    --jb-color-amber: @yellow;
     --jb-color-blue-300: @sky;
     --jb-color-blue: @blue;
     --jb-color-gray-50: rgb(249, 248, 247);
@@ -97,9 +97,125 @@
     // --sl-color-yellow-500: var(--jb-color-yellow);
     --sl-color-purple-500: #b68cff;
     // --sl-color-green-500: var(--jb-color-green)
+    // Custom Changes
     jb-spinner {
       color: @blue;
     }
+    jb-bar {
+      background-color: @surface0 !important;
+    }
+    table#products_table thead th {
+      background-color: @surface1;
+    }
+    table#products_table thead th.labor,
+    table.project-items-table thead th.labor {
+      background-color: @surface0;
+    }
+    nav.quaternary {
+      background-color: @mantle;
+    }
+    nav.quaternary li a {
+      color: @text;
+    }
+    nav.quaternary li.selected {
+      color: @text;
+      background-color: @base !important;
+    }
+    nav.builder h2.inactive, nav.builder h2 a.collapsed {
+      color: @subtext0;
+    }
+    nav.builder section.additional_filters {
+      border-color: @surface0;
+    }
+    nav.quaternary hr {
+      border-color: @surface0;
+    }
     // NOT Added
+    .table > tbody > tr > td {
+      border-color: @surface0;
+    }
+    .table > tbody + tbody {
+      border-color: @surface0;
+    }
+    table#products_table tfoot {
+      border-color: @surface0;
+    }
+    article.overview section.col-height h2 {
+      color: @text;
+      background-color: @surface1;
+    }
+    article.overview section.col-height > section {
+      border-color: @surface0;
+    }
+    nav.secondary, .nav-container nav.secondary {
+      background-color: @crust;
+    }
+    nav.secondary header, .nav-container nav.secondary header {
+      border-color: @surface0;
+    }
+    nav.secondary header a, .nav-container nav.secondary header a {
+      color: @subtext1;
+    }
+    aside > nav ul li a:hover,
+    aside > nav ul li a.selected,
+    .nav-container nav ul li a:hover,
+    .nav-container nav ul li a.selected {
+      color: @text;
+    }
+    aside > nav .disabled, .nav-container nav .disabled {
+      color: @overlay0;
+    }
+    aside > nav ul li a {
+      color: @subtext0;
+    }
+    nav.secondary h2, .nav-container nav.secondary h2 {
+      color: @text;
+    }
+    section.stage .stage-color {
+      background-color: @surface1;
+    }
+    .stage_bar hr {
+      border-color: @surface1;
+    }
+    table .stage-color.opportunity,
+    ul .stage-color.opportunity,
+    figure .stage-color.opportunity {
+      background-color: @yellow;
+    }
+    table .stage-color.estimate,
+    ul .stage-color.estimate,
+    figure .stage-color.estimate {
+      background-color: @green;
+    }
+    table .stage-color.proposal,
+    ul .stage-color.proposal,
+    figure .stage-color.proposal {
+      background-color: @blue;
+    }
+    table .stage-color.contract,
+    ul .stage-color.contract,
+    figure .stage-color.contract {
+      background-color: @mauve;
+    }
+    ul .stage-color.install,
+    figure .stage-color.install {
+      background-color: @peach;
+    }
+    table .stage-color.review,
+    ul .stage-color.review,
+    figure .stage-color.review {
+      background-color: @flamingo;
+    }
+    table .stage-color.completed,
+    table .stage-color.lost,
+    ul .stage-color.completed,
+    ul .stage-color.lost,
+    figure .stage-color.completed,
+    figure .stage-color.lost {
+      background-color: @surface2;
+    }
+    a.move_stage {
+      color: @subtext1;
+    }
   }
 }
