@@ -2291,55 +2291,6 @@ button.close {
   --sl-tooltip-color: var(--sl-color-neutral-0);
 }
 
-:root {
-  --jb-color-drawings: rgb(171, 9, 128);
-  --jb-color-tan: #efeee8;
-  --jb-color-yellow: @yellow;
-  --jb-color-orange: #ff811c;
-  --jb-color-purple: @lavender;
-  --jb-color-gold: #dcb53d;
-  --jb-color-red: @red;
-  --jb-color-green: @green;
-  --jb-color-white: #fff;
-  --jb-color-amber: #dfba2d;
-  --jb-color-blue-300: @sky;
-  --jb-color-blue: @blue;
-  --jb-color-gray-50: rgb(249, 248, 247);
-  --jb-color-gray-75: rgb(230, 230, 230);
-  --jb-color-gray-100: rgb(210, 210, 203);
-  --jb-color-gray-200: rgb(179, 179, 179);
-  --jb-color-gray-300: rgb(153, 153, 153);
-  --jb-color-gray-400: rgb(119, 117, 117);
-  --jb-color-gray-500: #aaa;
-  --jb-color-gray-600: rgb(132 132 132);
-  --jb-color-gray-700: rgb(102, 102, 102);
-  --jb-color-gray-800: rgb(51, 51, 51);
-  --jb-color-gray-900: rgb(38, 44, 51);
-  --jb-color-gray-925: #222;
-  --jb-color-gray-950: rgb(11, 16, 25);
-  --jb-font-bold: "DINNextLTPro-Bold";
-  --jb-font-light: "DINNextLTPro-Light";
-  --jb-font-regular: "DINNextLTPro-Regular";
-  --jb-font-medium: "DINNextLTPro-Medium";
-  --sl-font-sans: var(--jb-font-light);
-  // --sl-color-neutral-50: var(--jb-color-gray-50);
-  // --sl-color-neutral-100: var(--jb-color-gray-100);
-  // --sl-color-neutral-200: var(--jb-color-gray-200);
-  // --sl-color-neutral-300: var(--jb-color-gray-300);
-  // --sl-color-neutral-400: var(--jb-color-gray-400);
-  // --sl-color-neutral-500: var(--jb-color-gray-500);
-  // --sl-color-neutral-600: var(--jb-color-gray-600);
-  // --sl-color-neutral-700: var(--jb-color-gray-700);
-  // --sl-color-neutral-800: var(--jb-color-gray-800);
-  // --sl-color-neutral-900: var(--jb-color-gray-900);
-  // --sl-color-neutral-950: var(--jb-color-gray-950);
-  // --sl-color-primary-500: var(--jb-color-blue);
-  // --sl-color-danger-500: var(--jb-color-red);
-  // --sl-color-yellow-500: var(--jb-color-yellow);
-  --sl-color-purple-500: #b68cff;
-  // --sl-color-green-500: var(--jb-color-green);
-}
-
 .joint-paper-scroller {
   overscroll-behavior: contain;
 }
@@ -7253,11 +7204,11 @@ fieldset[disabled] .twitter-typeahead .tt-input {
   background-color: #999;
 }
 
-.btn.red,
-.btn.red:hover {
-  color: #fff;
-  background-color: #ff6c6c;
-}
+// .btn.red,
+// .btn.red:hover {
+//   color: #fff;
+//   background-color: #ff6c6c;
+// }
 
 .btn.orange,
 .btn.orange:hover {
@@ -8591,7 +8542,7 @@ form.edit_user_form .workflow-select {
 }
 
 table.table tbody tr:hover {
-  background-color: @overlay2;
+  background-color: rgba(@overlay2, 0.3);
 }
 
 .activity-timeline .notice {
@@ -9416,7 +9367,7 @@ table#products_table th.labor,
 table#products_table td.labor,
 table.project-items-table th.labor,
 table.project-items-table td.labor {
-  background-color: #fff;
+  background-color: @base;
 }
 
 table#products_table th.sublabor,
@@ -9439,12 +9390,12 @@ table#products_table tbody tr:hover td.tech_field,
 table.project-items-table tbody tr:hover td.labor,
 table.project-items-table tbody tr:hover td.sublabor,
 table.project-items-table tbody tr:hover td.tech_field {
-  background-color: hsl(51.4285714286, 17.9487179487%, 87.3529411765%);
+  background-color: rgba(@overlay2, 0.3);
 }
 
 table#products_table tbody tr:hover td.sticky-column,
 table.project-items-table tbody tr:hover td.sticky-column {
-  background-color: hsl(51.4285714286, 17.9487179487%, 87.3529411765%);
+  background-color: rgba(@overlay2, 0.3);
 }
 
 table#products_table thead th.tech_field,
@@ -9742,7 +9693,7 @@ article#bid_comparison table.bid-detail td:nth-last-child(-n+3) {
 
 jb-bar.equipment,
 jb-bar.equipment_total {
-  --bar-color: #40a0ff;
+  --bar-color: @blue;
 }
 
 jb-bar.engineering {
