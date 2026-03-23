@@ -98,24 +98,31 @@
     --sl-color-purple-500: #b68cff;
     // --sl-color-green-500: var(--jb-color-green);
 
-    // table#products_table .hover-links a,
-    // table.project-items-table .hover-links a {
-    //   background-color: rgba(@overlay2, 0.3);
-    // }
-    // table.table tbody tr:hover {
-    //   background-color: rgba(@overlay2, 0.3);
-    // }
-    // table#products_table tbody tr:hover td.labor,
-    // table#products_table tbody tr:hover td.sublabor,
-    // table#products_table tbody tr:hover td.tech_field,
-    // table.project-items-table tbody tr:hover td.labor,
-    // table.project-items-table tbody tr:hover td.sublabor,
-    // table.project-items-table tbody tr:hover td.tech_field {
-    //   background-color: rgba(@overlay2, 0.3);
-    // }
-    // table#products_table tbody tr:hover td.sticky-column,
-    // table.project-items-table tbody tr:hover td.sticky-column {
-    //   background-color: rgba(@overlay2, 0.3);
-    // }
+    table#products_table .hover-links a,
+    table.project-items-table .hover-links a {
+      background-color: initial;
+    }
+    table.table tbody tr:hover {
+      background-color: rgba(@overlay2, 0.3);
+    }
+    table#products_table tbody tr:hover td.labor,
+    table#products_table tbody tr:hover td.sublabor,
+    table#products_table tbody tr:hover td.tech_field,
+    table.project-items-table tbody tr:hover td.labor,
+    table.project-items-table tbody tr:hover td.sublabor,
+    table.project-items-table tbody tr:hover td.tech_field {
+      background-color: initial;
+    }
+    table#products_table tbody tr:hover td.sticky-column,
+    table.project-items-table tbody tr:hover td.sticky-column {
+      background-color: initial;
+    }
+
+    table#products_table th.labor,
+    table#products_table td.labor,
+    table.project-items-table th.labor,
+    table.project-items-table td.labor {
+      background-color: @mantle;
+    }
   }
 }
